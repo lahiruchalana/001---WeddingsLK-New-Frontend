@@ -1,89 +1,123 @@
+import React, { useState, useEffect } from 'react';
 
 import styled from "styled-components";
-import SearchIcon from '@material-ui/icons/Search';
-// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+
+
 
 import useStyles from './HeaderStyles';
 
-const Header = (props) => {
+const Header = () => {
 
 
-    const user = null;
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
+    console.log(user);
+
+    const logout = () => {
+
+    };
 
 
     const classes = useStyles();
 
 
     return (
-       <Nav>
+        <Nav>
             <HeaderLogo>
-                <a href= '/'>
-                    <img src= "../images/Logo.png"/> 
+                <a href='/'>
+                    <img src="../images/Logo.png" />
                 </a>
             </HeaderLogo>
             <HeaderNav>
                 {/* TODO -- make drop down here */}
-                <a href= '/weddingplans'>
+                <a href='/weddingplans'>
                     <span>WEDDING PLANS</span>
                 </a>
-                <a href= '/services'>
+                <a href='/services'>
                     <span>SERVICES</span>
                 </a>
-                <a href= '/vendors'>
+                <a href='/vendors'>
                     <span>VENDORS</span>
                 </a>
-                <a href= '/shops'>
+                <a href='/shops'>
                     <span>SHOPS</span>
                 </a>
-                <a href= '/Galleries'>
+                <a href='/Galleries'>
                     <span>GALLERIES</span>
                 </a>
-                <a href= '/about'>
+                <a href='/about'>
                     <span>ABOUT</span>
                 </a>
-                <a href= '/weddingwebsites'>
+                <a href='/weddingwebsites'>
                     <span>WEDDING WEBSITES</span>
                 </a>
-                <a href= '/weddinginvitationcards'>
+                <a href='/weddinginvitationcards'>
                     <span>INVITATION CARDS</span>
                 </a>
             </HeaderNav>
-            <HeaderSearch>
-                <a href= '/search/results'>
-                    <input className= "header__searchInput" type= "text"/>
+            {/* <HeaderSearch>
+                <a href='/search/results'>
+                    <input className="header__searchInput" type="text" />
                 </a>
             </HeaderSearch>
             <Search>
                 <a href="/search/reasults">
-                <SearchIcon></SearchIcon>
+                    <SearchIcon></SearchIcon>
                 </a>
-            </Search>
-            <ToolBar>
-                {user ? (
-                    <Profile>
-                        {/* <Avatar alt= {user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar>
-                        <Typography>{user.result.name}</Typography> */}
+            </Search> */}
+
+
+            <ToolBar className={classes.toolbar}>
+                {user?.result ? (
+                    <div className={classes.profile}>
                         <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
                         <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
-                        {/* <Logout>Logout</Logout> */}
-                        <a href= '/user/logout'>
-                        <span>Logout</span>
-                        </a>
-                        {/* <a href= '/user/profile'>
-                        <img src="/images/User_Icon.png"/>
-                        </a> */}
-                    </Profile>
+                        <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
+                    </div>
                 ) : (
+                    // <Button component={Link} to="/user/auth" variant="contained" color="primary">Sign In</Button>
                     <HeaderNavIcon>
-                        <a href= '/user/auth'>
-                        <span>LogIn</span>
+                        <a href='/user/auth'>
+                            <span>LogIn</span>
                         </a>
-                        <a href= '/user/auth'>
-                        <span>SignUp</span>
+                        <a href='/user/auth'>
+                            <span>SignUp</span>
                         </a>
                     </HeaderNavIcon>
                 )}
             </ToolBar>
+
+
+
+            {/* Previous Toolbar START */}
+
+
+            {/* <ToolBar className={classes.toolbar}>
+                {user ? (
+                    <Profile className={classes.profile}>
+                        <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+                        <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
+                        <a href='/user/logout'>
+                            <span>Logout</span>
+                        </a>
+                    </Profile>
+                ) : (
+                    <HeaderNavIcon>
+                        <a href='/user/auth'>
+                            <span>LogIn</span>
+                        </a>
+                        <a href='/user/auth'>
+                            <span>SignUp</span>
+                        </a>
+                    </HeaderNavIcon>
+                )}
+            </ToolBar> */}
+
+
+            {/* Previous Toolbar END */}
+
+
         </Nav>
     );
 };
@@ -104,78 +138,87 @@ const Nav = styled.nav`
     z-index: 3;
 `;
 
-const Search = styled.div`
-    z-index: 5;
-    margin-top: 5px;
-    a {
-            color: #7E7272;
-        
-        }
-`;
+// const Search = styled.div`
+//     z-index: 5;
+//     margin-top: 5px;
+//     a {
+//             color: #7E7272;
+
+//         }
+// `;
+
 
 const ToolBar = styled.div`
 
 `;
+const Button = styled.div`
 
-const Profile = styled.div`
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    margin-right: auto;
-    margin-left: 0px;
-
-    a {
-        color: white;
-    text-decoration: none;
-    font-size: 10px;
-    margin: 3px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px;
-    }
-    
-    @media (max-width: 768px) {
-        display: none;
-    }
 `;
+
+
+
+// const Profile = styled.div`
+//     align-items: center;
+//     display: flex;
+//     flex-flow: row nowrap;
+//     height: 100%;
+//     justify-content: flex-end;
+//     margin: 0;
+//     padding: 0;
+//     position: relative;
+//     margin-right: auto;
+//     margin-left: 0px;
+
+//     a {
+//         color: white;
+//     text-decoration: none;
+//     font-size: 10px;
+//     margin: 3px;
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     padding: 5px;
+//     }
+
+//     @media (max-width: 768px) {
+//         display: none;
+//     }
+// `;
 
 const Typography = styled.div`
 
-    color: white;
+    /* color: white;
     text-decoration: none;
     font-size: 10px;
     margin: 3px;
     border: 1px solid white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px; */
+
+
 `;
 
 const Avatar = styled.div`
 
-    width: 20px;
-    height: auto;
+    /* width: 40px;
+    height: auto; */
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
         display: none;
-}
+} */
+
 `;
 
-const Logout = styled.div`
+// const Logout = styled.div`
 
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
-    margin: 3px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px;
-`;
+//     color: white;
+//     text-decoration: none;
+//     font-size: 10px;
+//     margin: 3px;
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     padding: 5px;
+// `;
 
 
 const HeaderNavIcon = styled.div`
@@ -187,8 +230,9 @@ const HeaderNavIcon = styled.div`
     margin: 0;
     padding: 0;
     position: relative;
-    margin-right: auto;
+    margin-right: 10px;
     margin-left: 0px;
+    
 
     a {
         color: white;
@@ -198,58 +242,59 @@ const HeaderNavIcon = styled.div`
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px;
-    }
-    
-    @media (max-width: 768px) {
-        display: none;
-    }
-`;
-
-const LogIn = styled.div`
-
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
-    margin: 3px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px;
-`;
-
-const SignUp = styled.div`
-
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
-    margin: 3px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px;
-
-
-`;
-
-const HeaderSearch = styled.div`
-    a {
-        input {
-            background-color: rgba(88, 83, 83, 0.986);
-            color: gray;
-            border-radius: 5px;
-        }
-
+    margin-left: 10px;
     }
 
     @media (max-width: 768px) {
         display: none;
     }
 `;
+
+// const LogIn = styled.div`
+
+//     color: white;
+//     text-decoration: none;
+//     font-size: 10px;
+//     margin: 3px;
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     padding: 5px;
+// `;
+
+// const SignUp = styled.div`
+
+//     color: white;
+//     text-decoration: none;
+//     font-size: 10px;
+//     margin: 3px;
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     padding: 5px;
+
+
+// `;
+
+// const HeaderSearch = styled.div`
+//     a {
+//         input {
+//             background-color: rgba(88, 83, 83, 0.986);
+//             color: gray;
+//             border-radius: 5px;
+//         }
+
+//     }
+
+//     @media (max-width: 768px) {
+//         display: none;
+//     }
+// `;
 
 
 //  a {
 //     color: white;
 //     text-decoration: none;
 //   }
-  
+
 const HeaderLogo = styled.div`
     a {
         img{
@@ -263,7 +308,7 @@ const HeaderLogo = styled.div`
     }
 `;
 
-const  HeaderNav = styled.div`
+const HeaderNav = styled.div`
     align-items: center;
     display: flex;
     flex-flow: row nowrap;

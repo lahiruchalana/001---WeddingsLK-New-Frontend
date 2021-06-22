@@ -15,97 +15,97 @@ const Home = (props) => {
         <Container>
             <Content>
 
-                                                    {/* Strat of background image for home */}
-                                                    {/* Done */}
+                {/* Strat of background image for home */}
+                {/* Done */}
 
-                <BgImageHome src= "/images/BgImageHome.jpg"/>
-                    <BtnHostYourWedding>
-                        <a href= "/user/profile">
-                            <BtnHostYourWeddingText>HOST YOUR WEDDING</BtnHostYourWeddingText>
-                        </a>
-                    </BtnHostYourWedding>
-                    <TextTop1>comfortably plan the most valuable day of your life with us.</TextTop1>
-                    <TextTop2>I appreciate you getting this to me so comfortably so I have time to spend fill of joyness my wedding. 'Kasun'</TextTop2>
+                <BgImageHome src="/images/BgImageHome.jpg" />
+                <BtnHostYourWedding>
+                    <a href="/user/auth">
+                        <BtnHostYourWeddingText>HOST YOUR WEDDING</BtnHostYourWeddingText>
+                    </a>
+                </BtnHostYourWedding>
+                <TextTop1>comfortably plan the most valuable day of your life with us.</TextTop1>
+                <TextTop2>I appreciate you getting this to me so comfortably so I have time to spend fill of joyness my wedding. 'Kasun'</TextTop2>
                 <BgColoredSection1></BgColoredSection1>
 
-                                                     {/* End of background image for home */}
-                                                     {/* Done */}
+                {/* End of background image for home */}
+                {/* Done */}
 
-                <br/>
+                <br />
                 <BgColoredSection2></BgColoredSection2>
                 <Title1>How You Can Plan Your Wedding, Learn It Step By Step</Title1>
                 <TitleUnderLine></TitleUnderLine>
-                <BgImageSteps src= "/images/BgImageSteps.jpg"/>
+                <BgImageSteps src="/images/BgImageSteps.jpg" />
                 <BtnSteps>
                     <a href="/">
                         <BtnStepsNo1>Sign Up and Log In</BtnStepsNo1>
                     </a>
                     <ImgArrowNo1>
-                        <img src="/images/ImgArrow.ico"/>
-                    </ImgArrowNo1> 
+                        <img src="/images/ImgArrow.ico" />
+                    </ImgArrowNo1>
                     <a href="/">
                         <BtnStepsNo2>Check Out Our Services, Vendors and Our Wedding Plans</BtnStepsNo2>
                     </a>
                     <ImgArrowNo2>
-                        <img src="/images/ImgArrow.ico"/>
-                    </ImgArrowNo2> 
+                        <img src="/images/ImgArrow.ico" />
+                    </ImgArrowNo2>
                     <a href="/">
                         <BtnStepsNo3>Meet Your Wedding Oraganizer</BtnStepsNo3>
                     </a>
                     <ImgArrowNo3>
-                        <img src="/images/ImgArrow.ico"/>
-                    </ImgArrowNo3> 
+                        <img src="/images/ImgArrow.ico" />
+                    </ImgArrowNo3>
                     <a href="/">
                         <BtnStepsNo4>Confirm and Buy Your Services and Vendors</BtnStepsNo4>
                     </a>
                     <ImgArrowNo4>
-                        <img src="/images/ImgArrow.ico"/>
-                    </ImgArrowNo4> 
+                        <img src="/images/ImgArrow.ico" />
+                    </ImgArrowNo4>
                     <a href="/">
                         <BtnStepsNo5>Manage Your Services and Vendors</BtnStepsNo5>
                     </a>
                     <ImgArrowNo5>
-                        <img src="/images/ImgArrow.ico"/>
-                    </ImgArrowNo5> 
+                        <img src="/images/ImgArrow.ico" />
+                    </ImgArrowNo5>
                     <a href="/">
                         <BtnStepsNo6>View The Progress of The Wedding</BtnStepsNo6>
                     </a>
                 </BtnSteps>
                 <BgColoredSection3></BgColoredSection3>
-                <br/>
+                <br />
 
-                                                     {/* End of background image for home */}
-                                                     {/* Done */}
+                {/* End of background image for home */}
+                {/* Done */}
 
                 <UnderLine1></UnderLine1>
                 <BtnBarUp>
                     <a href="/">
-                        <BtnBarUpBtns href= "/">
-                            <StoreIcon fontSize="large"/>
+                        <BtnBarUpBtns href="/">
+                            <StoreIcon fontSize="large" />
                             <span>Find Wedding Vendors</span>
                         </BtnBarUpBtns>
                     </a>
                     <a href="/">
-                        <BtnBarUpBtns href= "/">
-                            <FormatListNumberedIcon fontSize="large"/>
+                        <BtnBarUpBtns href="/">
+                            <FormatListNumberedIcon fontSize="large" />
                             <span>Manage Your Services List</span>
                         </BtnBarUpBtns>
                     </a>
                     <a href="/">
-                        <BtnBarUpBtns href= "/">
-                            <SupervisorAccountIcon fontSize="large"/>
+                        <BtnBarUpBtns href="/">
+                            <SupervisorAccountIcon fontSize="large" />
                             <span>Meet Your Event Organizers</span>
                         </BtnBarUpBtns>
                     </a>
                     <a href="/">
-                        <BtnBarUpBtns href= "/">
-                            <PlaylistAddCheckIcon fontSize="large"/>
+                        <BtnBarUpBtns href="/">
+                            <PlaylistAddCheckIcon fontSize="large" />
                             <span>Your Wedding Progress</span>
                         </BtnBarUpBtns>
                     </a>
                     <a href="/">
-                        <BtnBarUpBtns href= "/">
-                            <WebIcon fontSize="large"/>
+                        <BtnBarUpBtns href="/">
+                            <WebIcon fontSize="large" />
                             <span>Create Web Site for Your Wedding</span>
                         </BtnBarUpBtns>
                     </a>
@@ -113,81 +113,81 @@ const Home = (props) => {
                 <BtnBarDown>
                     <a href="/">
                         <BtnBarDownBtns>
-                            <FeedbackIcon fontSize="large"/>
+                            <FeedbackIcon fontSize="large" />
                             <span>Community Feed Backs</span>
                         </BtnBarDownBtns>
                     </a>
                     <a href="/">
                         <BtnBarDownBtns>
-                            <AddShoppingCartIcon fontSize="large"/>
+                            <AddShoppingCartIcon fontSize="large" />
                             <span>Add New Services</span>
                         </BtnBarDownBtns>
                     </a>
                     <a href="/">
                         <BtnBarDownBtns>
-                            <AttachMoneyIcon fontSize="large"/>
+                            <AttachMoneyIcon fontSize="large" />
                             <span>Your Wedding Budget Planning</span>
                         </BtnBarDownBtns>
                     </a>
                 </BtnBarDown>
                 <UnderLine2></UnderLine2>
 
-                                                     {/* End of background image for home */}  
-                                                     {/* Done */}
+                {/* End of background image for home */}
+                {/* Done */}
 
                 <BtnHostYourWedding1>
-                    <a href= "/user/profile">
+                    <a href="/user/profile">
                         <BtnHostYourWeddingText>HOST YOUR WEDDING</BtnHostYourWeddingText>
                     </a>
                 </BtnHostYourWedding1>
                 <UnderLine3></UnderLine3>
                 <BgColoredSection4></BgColoredSection4>
 
-                                                     {/* End of background image for home */}
-                                                     {/* Done */}
+                {/* End of background image for home */}
+                {/* Done */}
 
                 <Title>WEDDING PLANNING</Title>
                 <TitleUnderLine></TitleUnderLine>
                 <Nav>
                     <NavSection>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Wedding Plans(Fixed)</NavSectionText>
                         </a>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Wedding Plans(Flexible)</NavSectionText>
                         </a>
                     </NavSection>
                     <NavSection>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Plan Platinum</NavSectionText>
                         </a>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Plan Gold</NavSectionText>
                         </a>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Plan Silver</NavSectionText>
                         </a>
                     </NavSection>
                     <NavSection>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Vendor Bunches(Group of Vendors)</NavSectionText>
                         </a>
-                        <a href= "/">
+                        <a href="/">
                             <NavSectionText>Customized Plans</NavSectionText>
                         </a>
                     </NavSection>
                 </Nav>
                 <UnderLine4></UnderLine4>
 
-                                                     {/* End of background image for home */}
-                                                     {/* Done */}
+                {/* End of background image for home */}
+                {/* Done */}
 
                 <Title>WEDDING IDEAS AND TIPS</Title>
                 <TitleUnderLine></TitleUnderLine>
                 <BgOurIdeasTips></BgOurIdeasTips>
                 <SectionOurIdeasTips>
                     <BgImageIdeasTipsNo1>
-                        <img src="/images/BgImageIdeasTipsNo1.jpg"/>
+                        <img src="/images/BgImageIdeasTipsNo1.jpg" />
                     </BgImageIdeasTipsNo1>
                     <a href="/">
                         <BtnSectionOurIdeasTips>Our New Wedding Ideas and Tips</BtnSectionOurIdeasTips>
@@ -201,215 +201,215 @@ const Home = (props) => {
                         <p>Let's make your precious day more attractive and beautiful with our most popular ideas and tips</p>
                     </a>
                     <BgImageIdeasTipsNo2>
-                        <img src= "/images/BgImageIdeasTipsNo2.jpg"/>
+                        <img src="/images/BgImageIdeasTipsNo2.jpg" />
                     </BgImageIdeasTipsNo2>
                 </SectionPopularIdeasTips>
                 <UnderLine5></UnderLine5>
 
-                                                     {/* End of background image for home */}
+                {/* End of background image for home */}
 
                 <SectionVendors>
                     <BgImageVendors>
-                        <img src="/images/BgImageVendors.jpg"/>
-                    </BgImageVendors>             
+                        <img src="/images/BgImageVendors.jpg" />
+                    </BgImageVendors>
                     <BgSectionWhite></BgSectionWhite>
                     <TitleVendors>WEDDING VENDORS</TitleVendors>
                     <TitleVendorsUnderLine></TitleVendorsUnderLine>
                     <TitleVendorsP>Find your preferred vendors through these services.....</TitleVendorsP>
                     <ColumSectionVendorsContainer>
                         <ColumSectionVendors>
-                            <a href= "/weddingvenue">
+                            <a href="/weddingvenue">
                                 <ServiceName>Wedding Venues</ServiceName>
                             </a>
-                            <a href= "/weddingdresses">
+                            <a href="/weddingdresses">
                                 <ServiceName>Wedding Dresses </ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Photographers</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Officiants</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Planners</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Bridal Dressing</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Grooms Outfit </ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Poruwa Ceremonies</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Caterers</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Florists</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Suvenirs  </ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Lightings</ServiceName>
                             </a>
                         </ColumSectionVendors>
                         <ColumSectionVendors>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Decorations</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Beauticians</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Cultural Requirements </ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Cakes and Boxes </ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Invitations</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Dress Design</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Hair and Makeup</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Shoes</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Videographers</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Rentals</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Limos</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Travel Agents</ServiceName>
                             </a>
                         </ColumSectionVendors>
                         <ColumSectionVendors>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Stationaries</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Bouquets</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Entertainment</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Jewelers</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Transports</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Ashtaka Service</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Honeymoon Planning</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Dancing Groups</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Musicians</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Djs </ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Wedding Bands</ServiceName>
                             </a>
-                            <a href= "/">
+                            <a href="/">
                                 <ServiceName>Pre Shoot Locations</ServiceName>
                             </a>
                         </ColumSectionVendors>
                     </ColumSectionVendorsContainer>
-                </SectionVendors> 
+                </SectionVendors>
 
-                                                     {/* End of background image for home */}
-                
+                {/* End of background image for home */}
+
                 <BgCreateYourWebsite></BgCreateYourWebsite>
                 <TitleCreateYourWebsite>CREATE YOUR WEBSITE</TitleCreateYourWebsite>
                 <TitleUnderLineCreateYourWebsite></TitleUnderLineCreateYourWebsite>
                 <SectionWebsiteContainer>
                     <SectionPopularWebsite>
-                        <a href= "/">
+                        <a href="/">
                             <BtnSectionPopularWebsite>Popular Wedding Websites</BtnSectionPopularWebsite>
                             <p>50+ popular wedding websites templates designed to include your wedding day info and give guests everything they need.</p>
                         </a>
-                        <img src= "./images/Wedding-Website1.JPG"/>
+                        <img src="./images/Wedding-Website1.JPG" />
                     </SectionPopularWebsite>
                     <SectionBestWebsite>
-                        <img src= "./images/Wedding-Website2.JPG"/>
-                        <a href= "/">
+                        <img src="./images/Wedding-Website2.JPG" />
+                        <a href="/">
                             <BtnSectionBestWebsite>Best Wedding Websites</BtnSectionBestWebsite>
                             <p>30+ best wedding website templates designed to include your wedding day info and give guests everything they need.</p>
                         </a>
                     </SectionBestWebsite>
                     <SectionCustomWebsite>
-                        <a href= "/">
+                        <a href="/">
                             <BtnSectionCustomWebsite>Custom Wedding Website</BtnSectionCustomWebsite>
                             <p>Design your wedding website to include your wedding day info and give guests everything they need. you can customize any features as you want.</p>
                         </a>
-                        <img src= "./images/Wedding-Website3.JPG"/>
+                        <img src="./images/Wedding-Website3.JPG" />
                     </SectionCustomWebsite>
                 </SectionWebsiteContainer>
                 <UnderLineCreateYourWebsite></UnderLineCreateYourWebsite>
 
-                                                                     {/* End of background image for home */}
+                {/* End of background image for home */}
 
                 <BgGallery></BgGallery>
                 <TitleGallery>GALLERY</TitleGallery>
                 <TitleUnderLineGallery></TitleUnderLineGallery>
                 <SectionExploreGallery>
-                    <img src= "../images/HomeGallery2.jpg"/>
-                    <a href= "/">
+                    <img src="../images/HomeGallery2.jpg" />
+                    <a href="/">
                         <BtnSectionExploreGallery>Explore Wedding Photo Gallery</BtnSectionExploreGallery>
                         {/* <p>Design your wedding website to include your wedding day info and give guests everything they need. you can customize any features as you want.</p> */}
                     </a>
                 </SectionExploreGallery>
                 <SectionGalleryImages>
                     <BgImageGallery1>
-                        <img src= "../images/HomeGallery1.jpg"/>
+                        <img src="../images/HomeGallery1.jpg" />
                     </BgImageGallery1>
                     <BgImageGallery2>
-                        <img src= "../images/HomeGallery7.jpg"/>
+                        <img src="../images/HomeGallery7.jpg" />
                     </BgImageGallery2>
                     <BgImageGallery3>
-                        <img src= "../images/HomeGallery3.jpg"/>
+                        <img src="../images/HomeGallery3.jpg" />
                     </BgImageGallery3>
                     <BgImageGallery4>
-                        <img src= "../images/HomeGallery4.jpg"/>
+                        <img src="../images/HomeGallery4.jpg" />
                     </BgImageGallery4>
                     <BgImageGallery5>
-                        <img src= "../images/HomeGallery6.jpg"/>
+                        <img src="../images/HomeGallery6.jpg" />
                     </BgImageGallery5>
                 </SectionGalleryImages>
                 <SectionYourGallery>
-                    <a href= "/">
+                    <a href="/">
                         <BtnSectionYourGallery>Your Wedding Photo Gallery</BtnSectionYourGallery>
                         {/* <p>Design your wedding website to include your wedding day info and give guests everything they need. you can customize any features as you want.</p> */}
                     </a>
-                    <img src= "../images/HomeGallery5.jpg"/>
+                    <img src="../images/HomeGallery5.jpg" />
                 </SectionYourGallery>
                 <UnderLineGallery></UnderLineGallery>
 
-                                                                     {/* End of background image for home */}
+                {/* End of background image for home */}
 
                 <TitleRegisterVendor>Now Available You to Register As a Vendor</TitleRegisterVendor>
-                <a href= "/">
+                <a href="/">
                     <BtnVendorSignUp>Vendor Sign Up</BtnVendorSignUp>
                 </a>
             </Content>
-        </Container>       
+        </Container>
     );
 }
 
