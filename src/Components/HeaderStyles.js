@@ -21,12 +21,12 @@ export default makeStyles((theme) => ({
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
-    width: '230px',
+    width: '280px',
   },
   profile: {
     display: 'flex',
     justifyContent: 'space-between',
-    width: '230px',
+    width: '280px',
   },
   userName: {
     display: 'flex',

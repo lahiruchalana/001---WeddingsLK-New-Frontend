@@ -38,10 +38,8 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 
-
   //// new imports for react redux issue in useDispatch end //// 
-
-
+  
 );
 
 

@@ -2,25 +2,41 @@ import React, { useState, useEffect } from 'react';
 
 import styled from "styled-components";
 import { Link, useHistory, useLocation } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
 
 
 import useStyles from './HeaderStyles';
 
 const Header = () => {
 
-
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
-
-    console.log(user);
-
-    const logout = () => {
-
-    };
-
-
     const classes = useStyles();
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const location = useLocation();
 
+
+    useEffect(() => {
+        const token = user?.token;
+    
+        // if (token) {
+        //   const decodedToken = decode(token);
+    
+        //   if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+        // }
+    
+        setUser(JSON.parse(localStorage.getItem('profile')));
+      }, [location]);
+    
+
+      const logout = () => {
+        // dispatch({ type: actionType.LOGOUT });
+        dispatch({ type: "LOGOUT" });
+    
+        history.push('/');
+    
+        setUser(null);
+      };
 
     return (
         <Nav>
@@ -71,8 +87,8 @@ const Header = () => {
             <ToolBar className={classes.toolbar}>
                 {user?.result ? (
                     <div className={classes.profile}>
-                        <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
                         <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
+                        <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}/>
                         <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
                     </div>
                 ) : (
@@ -151,8 +167,13 @@ const Nav = styled.nav`
 const ToolBar = styled.div`
 
 `;
-const Button = styled.div`
-
+const Button = styled.button`
+ background-color: #000033;
+ margin-right: 5px;
+ color: white;
+ border-radius: 5px;
+ border-color: #A0A0A0;
+ font-size: 10px;
 `;
 
 
@@ -185,7 +206,7 @@ const Button = styled.div`
 // `;
 
 const Typography = styled.div`
-
+    margin-left: 50px;
     /* color: white;
     text-decoration: none;
     font-size: 10px;
@@ -197,15 +218,17 @@ const Typography = styled.div`
 
 `;
 
-const Avatar = styled.div`
+const Avatar = styled.img`
 
-    /* width: 40px;
-    height: auto; */
+    width: 30px;
+    height: auto; 
+    clip-path: circle();
+    margin-right: 0px;
 
 
-/* @media (max-width: 768px) {
+ @media (max-width: 768px) {
         display: none;
-} */
+}
 
 `;
 

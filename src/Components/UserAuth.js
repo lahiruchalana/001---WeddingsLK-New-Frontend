@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import { GoogleLogin } from 'react-google-login';
+import { useHistory } from 'react-router-dom';
 
 import Icon from './UserAuthIcon';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -31,6 +32,7 @@ const UserAuth = () => {
     const [showPassword, setShowPassword] = useState(false);
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
     const [isSignup, setIsSignup] = useState(false);
+    const history = useHistory();
 
 
     const handleSubmit = () => {
@@ -57,6 +59,7 @@ const UserAuth = () => {
         try {
             dispatch({ type: AUTH, data: { result, token } });
 
+            history.push('/');
         } catch (error) {
             console.log(error);
         }
