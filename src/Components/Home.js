@@ -111,7 +111,7 @@ const Home = (props) => {
                     </a>
                 </BtnBarUp>
                 <BtnBarDown>
-                    <a href="/">
+                    <a href="/communityfeedbacks">
                         <BtnBarDownBtns>
                             <FeedbackIcon fontSize="large" />
                             <span>Community Feed Backs</span>
@@ -403,6 +403,11 @@ const Home = (props) => {
                 <UnderLineGallery></UnderLineGallery>
 
                 {/* End of background image for home */}
+
+                <CommunityFeedBacksText>Lets Look at the Community Feed Backs for Services and Vendors</CommunityFeedBacksText>
+                <a href="/communityfeedbacks">
+                    <BtnCommunityFeedBacks>Community Feed Backs</BtnCommunityFeedBacks>
+                </a>
 
                 <TitleRegisterVendor>Now Available You to Register As a Vendor</TitleRegisterVendor>
                 <a href="/">
@@ -1413,6 +1418,41 @@ const UnderLineGallery = styled.div`
     margin-right: auto;
     z-index: 1;
 `;
+
+const CommunityFeedBacksText = styled.div`
+    color: #1E413F;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Gabriela', serif;
+    width: 50%;
+    z-index: 1;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    position: relative; 
+`;
+
+const BtnCommunityFeedBacks = styled.div`
+    margin-top: 20px;
+    background-color: #0D2C32;
+    opacity: 100%;
+    padding: 50px 30px;
+    width: 100%;
+    font-size: 25px;
+    word-spacing: 6px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+`;
+
 
 const TitleRegisterVendor = styled.div`
     color: #1E413F;

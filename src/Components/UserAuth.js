@@ -16,32 +16,37 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Input from './UserAuthInput';
 import useStyles from './UserAuthStyles';
 import { AUTH } from '../Constants/ActionTypes';
+import { signin, signup } from '../Actions/UserAuth';
 
+
+const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 
 
 const UserAuth = () => {
-
-
     //////////////  i changed this code start //////////////////
     const dispatch = useDispatch();
     //////////////  i changed this code end //////////////////
-
 
     const classes = useStyles();
     const [showPassword, setShowPassword] = useState(false);
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
     const [isSignup, setIsSignup] = useState(false);
     const history = useHistory();
+    const [form, setForm] = useState(initialState);
 
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
+        if (isSignup) {
+          dispatch(signup(form, history));
+        } else {
+          dispatch(signin(form, history));
+        }
     };
 
-    const handleChange = () => {
-
-    };
+    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);

@@ -87,8 +87,12 @@ const Header = () => {
             <ToolBar className={classes.toolbar}>
                 {user?.result ? (
                     <div className={classes.profile}>
+                        <a href='/user/profile'>  
                         <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
+                        </a>
+                        <a href='/user/profile'>    
                         <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}/>
+                        </a>
                         <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
                     </div>
                 ) : (
@@ -165,7 +169,12 @@ const Nav = styled.nav`
 
 
 const ToolBar = styled.div`
-
+    div {
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
 `;
 const Button = styled.button`
  background-color: #000033;
@@ -206,6 +215,7 @@ const Button = styled.button`
 // `;
 
 const Typography = styled.div`
+    margin-top: 7px;
     margin-left: 50px;
     /* color: white;
     text-decoration: none;

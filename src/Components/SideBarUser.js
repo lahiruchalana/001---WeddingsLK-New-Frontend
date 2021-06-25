@@ -5,8 +5,13 @@ import CurrentVendors from '@material-ui/icons/Store';
 import BugdetReport from '@material-ui/icons/LocalAtm';
 import Messanger from '@material-ui/icons/Message';
 import Settings from '@material-ui/icons/SettingsApplications';
+import React, { useState } from 'react';
+
 
 const SideBarUser = (props) => {
+
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
     return (
         <Container>
             <Content>
@@ -17,7 +22,7 @@ const SideBarUser = (props) => {
                             <img src= "../images/Logo.png"/> 
                         </a>
                     </Logo>
-                    <TxtCoupleNames>Kasun and Shashini</TxtCoupleNames>
+                    <TxtCoupleNames>{user?.result.name}</TxtCoupleNames>
                     <Row>
                         <a href="/">
                             <YourService></YourService>
@@ -105,14 +110,15 @@ const Row = styled.div`
 `;
 
 const TxtCoupleNames = styled.div`
-    max-width: 210px;
+    width: 210px;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 30px;
+    padding: 30px 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     background-color: #FFFFFF;
     color: #122322;
+
 `;
 
 const BtnYourServices = styled.div`

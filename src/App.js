@@ -24,6 +24,7 @@ import HeaderEmployee from "./Components/HeaderEmployee";
 import Shop from "./Components/Shop";
 import Websites from "./Components/Websites";
 import InvitationCards from "./Components/InvitationCards";
+import CommunityFeedBacks from "./Components/CommunityFeedBacks";
 
 function App() {
   return (
@@ -104,6 +105,11 @@ function App() {
           <Route path="/weddinginvitationcards">
             <Header/> 
             <InvitationCards/>
+            <Footer/>        
+          </Route>
+          <Route path="/communityfeedbacks">
+
+            <CommunityFeedBacks/>
             <Footer/>        
           </Route>
           <Route path="/search/reasults">
