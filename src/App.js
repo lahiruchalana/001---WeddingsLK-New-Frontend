@@ -108,9 +108,9 @@ function App() {
             <Footer/>        
           </Route>
           <Route path="/communityfeedbacks">
-
+          <Header/>
             <CommunityFeedBacks/>
-            <Footer/>        
+       
           </Route>
           <Route path="/search/reasults">
             <Header/> 

@@ -4,7 +4,7 @@ import { deepPurple } from '@material-ui/core/colors';
 export default makeStyles((theme) => ({
   mainContainer: {
     borderRadius: 15,
-    margin: '200px 0',
+    margin: '30px 0px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

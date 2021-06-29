@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import decode from 'jwt-decode';
 
 
 import useStyles from './HeaderStyles';
@@ -19,11 +20,11 @@ const Header = () => {
     useEffect(() => {
         const token = user?.token;
     
-        // if (token) {
-        //   const decodedToken = decode(token);
+        if (token) {
+          const decodedToken = decode(token);
     
-        //   if (decodedToken.exp * 1000 < new Date().getTime()) logout();
-        // }
+          if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+        }
     
         setUser(JSON.parse(localStorage.getItem('profile')));
       }, [location]);
@@ -101,9 +102,9 @@ const Header = () => {
                         <a href='/user/auth'>
                             <span>LogIn</span>
                         </a>
-                        <a href='/user/auth'>
+                        {/* <a href='/user/auth'>
                             <span>SignUp</span>
-                        </a>
+                        </a> */}
                     </HeaderNavIcon>
                 )}
             </ToolBar>
@@ -177,9 +178,9 @@ const ToolBar = styled.div`
     }
 `;
 const Button = styled.button`
- background-color: #000033;
+ background-color: #FFF;
  margin-right: 5px;
- color: white;
+ color: #230723;
  border-radius: 5px;
  border-color: #A0A0A0;
  font-size: 10px;
@@ -268,14 +269,18 @@ const HeaderNavIcon = styled.div`
     
 
     a {
-        color: white;
+        color: 230723;
     text-decoration: none;
     font-size: 10px;
     margin: 3px;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 5px;
     margin-left: 10px;
+    background-color: #FFF;
+    span {
+        color: #230723;
+    }
     }
 
     @media (max-width: 768px) {

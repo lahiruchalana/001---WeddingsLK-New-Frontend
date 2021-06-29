@@ -17,6 +17,7 @@ import { getPosts } from '../Actions/Feedbacks';
 import Posts from './FeedBacks/FeedBacks';
 import Form from './FeedBackForm/FeedBackForm';
 import Header from "./Header.js"
+import Footer from './Footer.js'
 
 const Home = () => {
   const [currentId, setCurrentId] = useState(0);
@@ -28,9 +29,8 @@ const Home = () => {
 
   return (
     <Grow in>
-      <Container>
-        {/* <Header />  */}
-        <Grid container justify="space-between" alignItems="stretch" spacing={3} >
+      <Container > 
+        <Grid container justify="space-between" alignItems="stretch" spacing={3}>
           <Grid item xs={12} sm={7}>
             <Posts setCurrentId={setCurrentId} />
           </Grid>
@@ -38,6 +38,7 @@ const Home = () => {
             <Form currentId={currentId} setCurrentId={setCurrentId} />
           </Grid>
         </Grid>
+
       </Container>
     </Grow>
   );
